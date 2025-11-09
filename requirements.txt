@@ -1,6 +1,8 @@
 flask
 flask-socketio
 eventlet
-opencv-contrib-python-headless
+opencv-python-headless
 ultralytics
 numpy
+face-alignment
+torch
