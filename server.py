@@ -14,7 +14,8 @@ yolo = YOLO("models/yolov8n.pt")
 face_cascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_default.xml")
 
 # Face Landmark model
-fa = face_alignment.FaceAlignment(face_alignment.LandmarksType._2D, device='cpu')
+fa = face_alignment.FaceAlignment(face_alignment.LandmarksType.TWO_D, device='cpu')
+
 
 clients = {}
 
@@ -100,3 +101,4 @@ def home():
 
 if __name__ == "__main__":
     socketio.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 5000)))
+
